@@ -12,7 +12,7 @@ from pathlib import Path
 import re
 
 def get_author(string):
-    authorMatch = re.search('[A-Z][^\s]*', string)
+    authorMatch = re.search('\w*[A-Z][^\s]*', string)
     return authorMatch.group() if authorMatch else '' 
 
 def get_year(string):
@@ -33,7 +33,7 @@ def tidy(string):
 
 def trim_cite(string):
     "Returns from the first capitalized word to the last parentheses, if possible"
-    citeMatch = re.search('[A-Z\(].*\)', string)
+    citeMatch = re.search('(?:\w*[A-Z]|\().*\)', string)
     return citeMatch.group() if citeMatch else string
 
 def pagenum(string):
