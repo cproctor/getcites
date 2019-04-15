@@ -5,7 +5,7 @@ looks like a citation from a text file.
 
 ## Usage
 
-'''
+```
 usage: Extract citations from a text file [-h] [-f {odt,text}] [-n] [-t] [-d]
                                           [-B WORDS_BEFORE] [-C WORDS_AFTER]
                                           source
@@ -26,5 +26,5 @@ optional arguments:
                         Number of words to select before the parenthesis
   -C WORDS_AFTER, --words_after WORDS_AFTER
                         Number of words to select after the parenthesis
-'''
+```
 
